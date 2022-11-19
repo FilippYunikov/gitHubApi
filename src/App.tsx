@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
-import { UserCard } from './components/userCard/UserCard';
-import { Input } from './components/input/Input';
-
+import { PageHome } from './pages/PageHome/PageHome';
+import { PageUser } from './pages/PageUser/PageUser';
 
 const App = () => {
-  const [githubUser, setGithubUser] = useState<string>('');
 
-  return (
-    <div className="App">
-      <header>
-        <h1>{'Test'}</h1>
-      </header>
-      <body>
-        <Input onChange={e => setGithubUser(e.target.value)} />
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', marginTop: 100, marginBottom: 40 }}>
-          <UserCard search={githubUser} />
-        </div>
-      </body>
-    </div>
-  );
+return(
+  <Router>
+    <Routes>
+      <Route path="/" element={<PageHome/>}/>
+      <Route path="/user" element={<PageUser/>}/>
+    </Routes>
+</Router>
+)
 };
 
 export default App;

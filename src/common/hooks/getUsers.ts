@@ -1,13 +1,13 @@
 import {useQuery} from 'react-query';
 import GetUsersService from '../../api/IgetUsers';
 
-export const useGetUsers = () => {
-  const {isLoading, data, isError} = useQuery(
-    ['getUsers'],
-    GetUsersService.findAll,
-  );
-  return {data, isLoading, isError};
-};
+// export const useGetUsers = () => {
+//   const {isLoading, data, isError} = useQuery(
+//     ['getUsers'],
+//     GetUsersService.findAll,
+//   );
+//   return {data, isLoading, isError};
+// };
 
 export const useGetUsersId = (id: string) => {
   const {isLoading, data, isError} = useQuery(['getUsersId'], async () => {
@@ -19,3 +19,14 @@ export const useGetUsersId = (id: string) => {
   })
   return {isLoading, data, isError};
 };
+
+// export const useGetUsersRepo = (id: string) => {
+//   const {isLoading, data, isError} = useQuery(['getUsersRepo'], async () => {
+//     return await GetUsersService.findRepo(id);
+//   },   
+//   {
+//     enabled: Boolean(id),
+//     retryDelay: 1000,
+//   })
+//   return {isLoading, data, isError};
+// };

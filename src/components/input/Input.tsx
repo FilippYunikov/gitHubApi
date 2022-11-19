@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface InputProps {
  onChange: (e: any) => void
 }
@@ -7,7 +6,7 @@ interface InputProps {
 export const Input = (props: InputProps) => {
 
     const {onChange} = props;
-    // console.log(onChange)
+
     return (
         <input
             type="text"
