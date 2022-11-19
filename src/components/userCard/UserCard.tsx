@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { useGetUsersId } from '../../common/hooks/getUsers';
+import useGetUsersId from '../../common/hooks/useGetUsersId';
 
-export const UserCard = (props: any) => {
+const UserCard = (props: any) => {
     const { search } = props;
 
     const { isLoading, data } = useGetUsersId(search);
-    
+
     return (
         <>
             {isLoading ? 'Loading...' : data?.items.map((el: any) => {
@@ -22,3 +21,5 @@ export const UserCard = (props: any) => {
         </>
     )
 }
+
+export default UserCard;

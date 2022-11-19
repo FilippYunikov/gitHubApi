@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const PageUser = () => {
     return (
         <div style={{ width: '100%', height: '100%' }}>

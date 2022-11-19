@@ -7,16 +7,6 @@ const apiClient = axios.create({
   },
 });
 
-// const findAll = async () => {
-//   const response = await apiClient.get<string[]>('/users');
-//   return response.data;
-// };
-
-// const findRepo = async (id: string) => {
-//   const response = await apiClient.get<string[]>(`/search/repositories?q=${id}`);
-//   return response.data;
-// };
-
 const findId = async (id: string) => {
   const response = await apiClient.get<any, AxiosResponse<any, any>, any>(`/search/users?q=${id}`);
   return response.data;
@@ -24,9 +14,7 @@ const findId = async (id: string) => {
 
 
 const GetUsersService = {
-  // findAll,
   findId,
-  // findRepo,
 };
 
 export default GetUsersService;
