@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { UserCard } from './components/userCard/UserCard';
+import { Input } from './components/input/Input';
 
-function App() {
+
+const App = () => {
+  const [githubUser, setGithubUser] = useState<string>('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
+      <header>
+        <h1>{'Test'}</h1>
       </header>
+      <body>
+        <Input onChange={e => setGithubUser(e.target.value)} />
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', marginTop: 100, marginBottom: 40 }}>
+          <UserCard search={githubUser} />
+        </div>
+      </body>
     </div>
   );
-}
+};
 
 export default App;
