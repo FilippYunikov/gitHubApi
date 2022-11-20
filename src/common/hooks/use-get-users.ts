@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 
-import GetUsersService from '../../api/users-service';
+import GetUsersService from '../../api/get-users-service';
 
 const useGetUsers = (id: string) => {
   const { isLoading, data, isError } = useQuery(['useGetUsers', id], async () => {
