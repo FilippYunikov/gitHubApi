@@ -1,1 +1,1 @@
-export * from './page-user'
+export * from './page-current-user'
