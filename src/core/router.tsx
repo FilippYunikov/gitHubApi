@@ -1,7 +1,6 @@
-import React from "react";
 import { Routes ,Route } from 'react-router-dom';
-import { PageHome } from "./pages/PageHome/PageHome";
-import { PageUser } from "./pages/PageUser/PageUser";
+import { PageHome } from "../pages/page-home/page-home";
+import { PageUser } from "../pages/page-user/page-user";
 
 export const Router = () => {
     return (

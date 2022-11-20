@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { PageHome } from './pages/PageHome/PageHome';
-import { PageUser } from './pages/PageUser/PageUser';
+
+import { PageHome } from '../pages/page-home';
+import { PageUser } from '../pages/page-user';
+import { NotFound } from '../pages/not-found';
 
 const App = () => {
 
@@ -10,6 +12,7 @@ return(
     <Routes>
       <Route path="/" element={<PageHome/>}/>
       <Route path="/user" element={<PageUser/>}/>
+      <Route element={<NotFound />} />
     </Routes>
 </Router>
 )
