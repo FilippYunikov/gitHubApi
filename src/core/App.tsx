@@ -1,18 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-
-import { PageHome } from '../pages/page-home';
-import { PageUser } from '../pages/page-user';
-import { NotFound } from '../pages/not-found';
 import { Navigation } from './router';
 
 const App = () => {
+  const queryClient = new QueryClient();
 
-return(
- <>
-  <Navigation/>
-</>
-)
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Navigation />
+    </QueryClientProvider>
+  )
 };
 
 export default App;
