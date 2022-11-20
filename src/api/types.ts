@@ -13,4 +13,6 @@ export interface ICurrentUser {
     avatar_url: string;
     bio: string;
     name: string;
+    login: string;
+    followers: number;
 }
