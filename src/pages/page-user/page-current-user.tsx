@@ -6,14 +6,14 @@ import useGetCurrentUser from '../../common/hooks/use-get-current-user';
 export const PageCurrentUser = () => {
     const navigate = useNavigate()
 
-    const {login} = useParams();
+    const { login } = useParams();
 
-    const {data} = useGetCurrentUser(login!);
+    const { data } = useGetCurrentUser(login!);
 
     const goBack = useCallback(() => {
         navigate('/')
     }, [])
-console.log(data)
+    
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
             <div style={{ display: 'flex', width: 500, height: 500, justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
@@ -26,7 +26,5 @@ console.log(data)
                 </button>
             </div>
         </div>
-
     )
-
 }
