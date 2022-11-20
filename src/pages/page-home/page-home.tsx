@@ -3,6 +3,7 @@ import debounce from 'lodash.debounce';
 
 import { InputCustom } from '../../components/input-custom';
 import { UserCard } from '../../components/user-card';
+import { ContainerCard, ContainerInput } from './page-homeSC';
 
 export const PageHome = () => {
     const [githubUser, setGithubUser] = useState<string>('');
@@ -13,12 +14,12 @@ export const PageHome = () => {
 
     return (
         <div>
-            <div style={{ display: 'flex', width: '100%', justifyContent: 'center', marginTop: 40 }}>
+            <ContainerInput>
                 <InputCustom onChange={debouncedOnChange} />
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%', marginTop: 100, marginBottom: 40 }}>
+            </ContainerInput>
+            <ContainerCard>
                 <UserCard search={githubUser} />
-            </div>
+            </ContainerCard>
         </div>
     )
 }
