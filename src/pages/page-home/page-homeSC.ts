@@ -8,12 +8,12 @@ export const ContainerInput = styled.div`
 `;
 
 export const ContainerCard = styled.div`
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  width: 100%;
-  margin-top: 100px; 
-  margin-bottom: 40px; 
-`;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%;
+    margin-top: 100px; 
+    margin-bottom: 40px; 
+  `;
 
 

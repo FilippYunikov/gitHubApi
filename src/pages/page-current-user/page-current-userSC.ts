@@ -22,11 +22,11 @@ export const UserAvatar = styled.img`
 `;
 
 export const Button = styled.button`
-display: flex; 
-align-items: center; 
-justify-content: center; 
-width: 80px; 
-height: 40px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 80px; 
+    height: 40px;
 `;
 
 
